@@ -1,3 +1,4 @@
-for i in range(10):
-    print(i)
+track = [1,2,3,4]
+for i in track:
+    track.append(i)
 

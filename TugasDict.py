@@ -56,4 +56,3 @@ def main():
 
 # Menjalankan program utama
 main()
-main()
