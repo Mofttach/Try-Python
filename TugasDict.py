@@ -13,8 +13,16 @@ def translate_word(word):
     if translation:
         return translation
     else:
-        return "Kata tidak ditemukan dalam kamus."
-
+        print("Kata tidak ditemukan dalam kamus.")
+        choice = input("Ketik 'tambah' untuk menambahkan kata ini atau 'cancel' untuk keluar: ").lower()
+        if choice == 'tambah':
+            new_translation = input("Masukkan terjemahan baru: ")
+            indo_to_russia[word] = new_translation
+            return f"Kata '{word}' dengan terjemahan '{new_translation}' telah ditambahkan ke kamus."
+        elif choice == 'cancel':
+            return "Keluar dari penambahan kata."
+        else:
+            return "Pilihan tidak valid."
 # Fungsi untuk mengupdate kata dalam kamus
 def update_word(old_word, new_word, new_translation):
     if old_word in indo_to_russia:
@@ -48,9 +56,8 @@ def main():
         if translation != "Kata tidak ditemukan dalam kamus.":
             action = input("Ketik 'update' untuk mengupdate, 'delete' untuk menghapus, atau tekan Enter untuk melanjutkan: ").lower()
             if action == "update":
-                new_word = input("Masukkan kata baru: ").lower()
                 new_translation = input("Masukkan terjemahan baru: ")
-                update_word(menu, new_word, new_translation)
+                update_word(menu, menu, new_translation)
             elif action == "delete":
                 delete_word(menu)
 

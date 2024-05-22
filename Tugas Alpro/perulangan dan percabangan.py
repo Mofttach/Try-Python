@@ -18,4 +18,9 @@ for k in range(5):
     print(f"Perulangan ke-{k+1}")
 
 
+nama = 'Rizky'
 
+if nama == 'Rizky':
+    print("Nama sesuai")
+else:
+    print("Nama tidak sesuai")
