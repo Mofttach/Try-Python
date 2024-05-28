@@ -1,26 +1,23 @@
 
-hujan = True
+n = int(input("Berapa banyak nya Bilangan : "))
+total = 0
+   
+bil_terbesar = None
+bil_terkecil = None
 
-if hujan :
-    print("Pake mantel biar gasakit")
-else:
-    print("Cuaca cerah, gasss berangkat")
+for i in range(1, n + 1):
+    bil = int(input(f'Bilangan ke {i} : '))
+    total = total + bil
+    if bil_terbesar is None or bil > bil_terbesar:
+        bil_terbesar = bil
+    if bil_terkecil is None or bil < bil_terkecil:
+        bil_terkecil = bil
 
-for i in range(1, 11):
-    print(f"Bayar utang {i}x")
-
-buah = ['mangga', 'apel', 'stroberi', 'kuldi', 'mboh karepmu']
-
-for j in buah:
-    print(j)
-
-for k in range(5):
-    print(f"Perulangan ke-{k+1}")
+print(f'Totalnya adalah {total}')
+print(f'Bilangan terbesar adalah {bil_terbesar}')
+print(f'Bilangan terkecil adalah {bil_terkecil}')
 
 
-nama = 'Rizky'
 
-if nama == 'Rizky':
-    print("Nama sesuai")
-else:
-    print("Nama tidak sesuai")
+
+
